@@ -5,6 +5,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from utils.clickbypath import click_button_by_xpath
 
 def extract_games(driver):
+    """
+    Create a dictionary and populate it with all games and their details.
+        Parameters: 
+            driver: Selenium webdriver
+    """
     games_dictionary= {}
 
     while True:
@@ -46,6 +51,11 @@ def extract_games(driver):
 
         nextpage_path = '//*[@id="ContentBlockList_1"]/div[1]/div[2]/nav/ul/li[5]'
         
+        """
+        When the 'click_button_by_xpath' function returns false,
+        it indicates that there are no more pages left to navigate,
+        and the function should terminate its operation.
+        """
         if not click_button_by_xpath(driver, nextpage_path):
             break 
     return games_dictionary

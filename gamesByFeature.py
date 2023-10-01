@@ -2,6 +2,13 @@ from utils.extractgamesid import extract_games_id
 
 
 def extract_by_feature(driver):
+    """
+    Retrieve game IDs categorized by various features and return them in a dictionary
+        Parameters: 
+            driver: Selenium webdriver
+
+    """
+
     games_smart_delivery = extract_games_id(
         driver, '//*[@id="filter-features"]/div/button', '//*[@id="featureSelect"]/li[1]', False)
     print(str(len(games_smart_delivery)) + ' games with smart delivery added')

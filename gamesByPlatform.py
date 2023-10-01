@@ -1,7 +1,13 @@
 from utils.extractgamesid import extract_games_id
 
-
 def extract_by_platform(driver):
+    """
+    Retrieve game IDs categorized by various platforms and return them in a dictionary.
+
+        Parameters: 
+            driver: selenium webdriver 
+
+    """
 
     games_xboxseries = extract_games_id(
         driver, '//*[@id="filter-playon"]/div/button', '//*[@id="playonSelect"]/li[1]', True)

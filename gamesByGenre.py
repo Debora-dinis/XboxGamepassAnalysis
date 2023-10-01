@@ -2,6 +2,14 @@ from utils.extractgamesid import extract_games_id
 
 
 def extract_by_genre(driver):
+    """
+    Retrieve game IDs categorized by various genres and return them in a dictionary.
+
+        Parameters: 
+            driver: selenium webdriver 
+
+    """
+
     games_action_adventure = extract_games_id(
         driver, '//*[@id="filter-genre"]/div/button', '//*[@id="genreSelect"]/li[1]', False)
     print(str(len(games_action_adventure)) + ' action and adventure games added')
