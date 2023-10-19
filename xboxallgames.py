@@ -26,7 +26,7 @@ def extract_games(driver):
 
             price = game.get_attribute('data-listprice')
 
-            rating = game.get_attribute('data-ratingsystem')
+            rating = game.get_attribute('data-rating')
 
             releasedate = game.get_attribute('data-releasedate')
 
